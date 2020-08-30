@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/default_padding"
+    android:layout_margin="@dimen/default_margin"
+    android:elevation="8dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userProfileIv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/userNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vishal Sheoran"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/heading_font"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/userProfileIv"
+        app:layout_constraintTop_toTopOf="@+id/userProfileIv"/>
+
+
+    <TextView
+        android:id="@+id/userGenderLblTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender : "
+        android:textStyle="bold"
+        android:fontFamily="@font/quicksand_regular"
+        android:textSize="12sp"
+        android:textColor="@color/grey"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="@+id/userNameTv"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTv"/>
+
+
+    <TextView
+        android:id="@+id/userGenderTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="m"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/heading_font"
+        app:layout_constraintBaseline_toBaselineOf="@+id/userGenderLblTv"
+        app:layout_constraintStart_toEndOf="@+id/userGenderLblTv"
+        app:layout_constraintBottom_toBottomOf="@+id/userGenderLblTv"/>
+
+
+    <View
+        android:id="@+id/centerDivider"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintTop_toTopOf="@+id/userGenderTv"
+        app:layout_constraintBottom_toBottomOf="@+id/userGenderTv"
+        app:layout_constraintStart_toEndOf="@+id/userGenderTv"/>
+
+
+    <TextView
+        android:id="@+id/userAgeLblTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age : "
+        android:textStyle="bold"
+        android:fontFamily="@font/quicksand_regular"
+        android:textSize="12sp"
+        android:textColor="@color/grey"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="@+id/centerDivider"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTv"/>
+
+
+    <TextView
+        android:id="@+id/userAgeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21 yr"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/heading_font"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/userAgeLblTv"
+        app:layout_constraintBaseline_toBaselineOf="@+id/userAgeLblTv"
+        app:layout_constraintBottom_toBottomOf="@+id/userAgeLblTv"/>
+
+
+    <TextView
+        android:id="@+id/statusLblTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:textSize="14sp"
+        android:fontFamily="@font/heading_font"
+        android:textStyle="bold"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/userNameTv"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/statusTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="active"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/heading_font"
+        app:layout_constraintTop_toBottomOf="@+id/statusLblTv"
+        app:layout_constraintEnd_toEndOf="@+id/statusLblTv"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
